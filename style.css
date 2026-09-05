@@ -1,0 +1,1487 @@
+/* =========================================================
+   REVgrow AI — PROFESSIONAL FINTECH DASHBOARD
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #071a33;
+    --navy-light: #0d2748;
+    --navy-hover: #12375f;
+
+    --blue: #2697e8;
+    --blue-dark: #1684d0;
+    --blue-light: #eaf6ff;
+
+    --white: #ffffff;
+    --background: #f5f9fd;
+
+    --text: #172b4d;
+    --muted: #718096;
+
+    --border: #e3edf5;
+
+    --green: #19a974;
+    --green-light: #e8f8f1;
+
+    --red: #e05252;
+    --red-light: #fff0f0;
+
+    --orange: #e99a32;
+    --orange-light: #fff4df;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+button,
+select,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SPLASH SCREEN
+========================================================= */
+
+.splash-screen {
+    position: fixed;
+    inset: 0;
+    background: var(--navy);
+    color: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 9999;
+
+    animation: splashFade 3s forwards;
+}
+
+.splash-content {
+    width: 90%;
+    max-width: 650px;
+    padding: 30px;
+}
+
+.logo-circle {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 20px;
+
+    background: var(--blue);
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    box-shadow: 0 12px 35px rgba(38, 151, 232, 0.25);
+}
+
+.splash-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+
+    margin-bottom: 8px;
+}
+
+.splash-content h1 span {
+    color: #63c4ff;
+}
+
+.agent-name {
+    color: #b9d8f2;
+    font-size: 17px;
+    margin-bottom: 45px;
+}
+
+.main-quote {
+    font-size: 25px;
+    line-height: 1.5;
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+}
+
+.loading p {
+    color: #9bb8d3;
+    font-size: 13px;
+}
+
+.loading span {
+    display: block;
+
+    width: 20px;
+    height: 3px;
+
+    background: var(--blue);
+
+    margin: 0 auto 12px;
+
+    border-radius: 10px;
+
+    animation: loading 2s infinite;
+}
+
+@keyframes loading {
+
+    0% {
+        width: 20px;
+    }
+
+    50% {
+        width: 120px;
+    }
+
+    100% {
+        width: 20px;
+    }
+}
+
+@keyframes splashFade {
+
+    0%,
+    80% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD
+========================================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 245px;
+
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    background: var(--navy);
+
+    color: var(--white);
+
+    padding: 25px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 10px 30px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+
+    background: var(--blue);
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.brand h2 {
+    font-size: 19px;
+}
+
+.brand span {
+    color: #63c4ff;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-item {
+    text-decoration: none;
+
+    color: #9eb4ca;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    background: var(--navy-light);
+    color: var(--white);
+}
+
+.nav-item.active {
+    background: var(--navy-hover);
+    color: var(--white);
+
+    box-shadow: inset 3px 0 0 var(--blue);
+}
+
+.nav-item span {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.agent-mini-card {
+    margin-top: 15px;
+
+    background: var(--navy-light);
+
+    border: 1px solid #21476d;
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.2s;
+}
+
+.agent-mini-card:hover {
+    background: var(--navy-hover);
+}
+
+.agent-avatar {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    background: var(--blue);
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.agent-mini-card strong {
+    display: block;
+    font-size: 13px;
+}
+
+.agent-mini-card small {
+    display: block;
+
+    color: #91abc2;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    margin-left: 245px;
+
+    width: calc(100% - 245px);
+
+    padding: 30px 40px;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.welcome-small {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+.top-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.notification {
+    width: 40px;
+    height: 40px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.notification:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.merchant-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+
+    background: var(--blue-light);
+
+    color: var(--blue);
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.merchant-profile strong,
+.merchant-profile small {
+    display: block;
+}
+
+.merchant-profile strong {
+    font-size: 13px;
+}
+
+.merchant-profile small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   PAGE SECTIONS
+========================================================= */
+
+/*
+   IMPORTANT:
+   Only the active page is displayed.
+   JavaScript will add/remove "active-page".
+*/
+
+.page-section {
+    display: none;
+
+    animation: pageFade 0.25s ease;
+}
+
+.page-section.active-page {
+    display: block;
+}
+
+@keyframes pageFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+    margin: 35px 0 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-section h2 {
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.hero-section p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.date-button {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    padding: 11px 16px;
+
+    border-radius: 9px;
+
+    color: var(--text);
+
+    transition: 0.2s;
+}
+
+.date-button:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   STAT CARDS
+========================================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.stat-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(7, 26, 51, 0.06);
+}
+
+.stat-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.stat-icon {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 9px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.stat-icon.revenue,
+.stat-icon.orders,
+.stat-icon.products {
+    background: var(--blue-light);
+
+    color: var(--blue);
+}
+
+.stat-icon.warning {
+    background: var(--orange-light);
+
+    color: var(--orange);
+}
+
+.stat-card h3 {
+    font-size: 25px;
+
+    margin: 15px 0 8px;
+}
+
+.stat-card p {
+    font-size: 12px;
+}
+
+.stat-card p span {
+    color: var(--muted);
+}
+
+.positive {
+    color: var(--green);
+}
+
+.negative {
+    color: var(--red);
+}
+
+.neutral {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   GENERAL CARDS
+========================================================= */
+
+.card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 22px;
+}
+
+.card-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.card-header p {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SALES + AI
+========================================================= */
+
+.main-grid {
+    display: grid;
+
+    grid-template-columns: 1.7fr 1fr;
+
+    gap: 18px;
+
+    margin-top: 18px;
+}
+
+.sales-card {
+    min-height: 390px;
+}
+
+#productFilter {
+    padding: 9px 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: var(--text);
+
+    outline: none;
+}
+
+#productFilter:focus {
+    border-color: var(--blue);
+}
+
+.chart-area {
+    height: 280px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f9fcff;
+
+    border-radius: 10px;
+}
+
+.chart-placeholder {
+    color: #9aabba;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   REGA AI CARD
+========================================================= */
+
+.ai-card {
+    border: 1px solid #ccecff;
+
+    background: linear-gradient(
+        145deg,
+        white,
+        #f2faff
+    );
+}
+
+.ai-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.rega-avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    background: var(--blue);
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+}
+
+.ai-header h3 {
+    font-size: 15px;
+}
+
+.ai-header p {
+    font-size: 11px;
+
+    color: var(--muted);
+
+    margin-top: 4px;
+}
+
+.opportunity-alert {
+    margin: 22px 0;
+
+    background: var(--orange-light);
+
+    color: #bd7719;
+
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+}
+
+.product-highlight {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.product-highlight span,
+.product-highlight strong {
+    display: block;
+}
+
+.product-highlight span {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+.product-highlight strong {
+    font-size: 14px;
+}
+
+.sales-comparison {
+    display: flex;
+
+    gap: 40px;
+
+    margin: 22px 0;
+}
+
+.sales-comparison small,
+.sales-comparison strong {
+    display: block;
+}
+
+.sales-comparison small {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.sales-comparison strong {
+    margin-top: 5px;
+
+    font-size: 22px;
+}
+
+.rega-message {
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #edf4f8;
+}
+
+.rega-message strong {
+    font-size: 12px;
+}
+
+.rega-message p {
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+}
+
+.primary-button {
+    width: 100%;
+
+    border: none;
+
+    background: var(--blue);
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.primary-button:hover {
+    background: var(--blue-dark);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   PRODUCTS TABLE
+========================================================= */
+
+.products-card {
+    margin-top: 18px;
+}
+
+.view-button {
+    border: none;
+
+    background: transparent;
+
+    color: var(--blue);
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.view-button:hover {
+    text-decoration: underline;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+
+    font-size: 11px;
+
+    color: var(--muted);
+
+    padding: 12px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 15px 12px;
+
+    font-size: 12px;
+
+    border-bottom: 1px solid #edf3f7;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.status {
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    display: inline-block;
+}
+
+.status.warning {
+    background: var(--orange-light);
+
+    color: #c17a17;
+}
+
+.status.success,
+.status.active {
+    background: var(--green-light);
+
+    color: var(--green);
+}
+
+
+/* =========================================================
+   BOTTOM GRID
+========================================================= */
+
+.bottom-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    margin-top: 18px;
+}
+
+.campaign {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.campaign:last-child {
+    border-bottom: none;
+}
+
+.campaign-icon {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    background: var(--blue-light);
+
+    color: var(--blue);
+
+    border-radius: 9px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.campaign strong {
+    font-size: 12px;
+}
+
+.campaign p {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 4px;
+}
+
+.campaign .status {
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   ACTIVITY
+========================================================= */
+
+.activity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.activity:last-child {
+    border-bottom: none;
+}
+
+.activity-dot {
+    width: 9px;
+    height: 9px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+.success-dot {
+    background: var(--green);
+}
+
+.ai-dot {
+    background: var(--blue);
+}
+
+.payment-dot {
+    background: var(--orange);
+}
+
+.activity strong,
+.activity small {
+    display: block;
+}
+
+.activity strong {
+    font-size: 12px;
+}
+
+.activity small {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   OTHER PAGE HEADINGS
+========================================================= */
+
+.page-heading {
+    margin: 35px 0 25px;
+}
+
+.page-heading h2 {
+    font-size: 25px;
+
+    margin-bottom: 7px;
+}
+
+.page-heading p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.page-card {
+    margin-top: 20px;
+}
+
+.page-card h3 {
+    font-size: 16px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   SIMPLE PRODUCT LIST
+========================================================= */
+
+.simple-product-list {
+    margin-top: 20px;
+}
+
+.simple-product-list > div {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.simple-product-list > div:last-child {
+    border-bottom: none;
+}
+
+.simple-product-list strong {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   AI GROWTH PAGE
+========================================================= */
+
+.ai-main-page {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    padding: 45px 35px;
+}
+
+.rega-large {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    background: var(--blue);
+
+    color: white;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+
+    box-shadow: 0 12px 30px rgba(38, 151, 232, 0.18);
+}
+
+.ai-main-page h2 {
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.ai-main-page > p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+.ai-insight-box {
+    text-align: left;
+
+    background: var(--blue-light);
+
+    border: 1px solid #ccecff;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+}
+
+.ai-insight-box strong {
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.ai-insight-box p {
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.ai-insight-box small {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   REPORTS
+========================================================= */
+
+.report-highlight {
+    background: var(--blue-light);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-top: 20px;
+}
+
+.report-highlight strong {
+    display: block;
+
+    font-size: 30px;
+
+    color: var(--text);
+}
+
+.report-highlight span {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+.setting-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.setting-row:last-child {
+    border-bottom: none;
+}
+
+.setting-row strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.setting-row p {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.setting-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+
+    accent-color: var(--blue);
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FOOTER QUOTE
+========================================================= */
+
+.dashboard-footer {
+    text-align: center;
+
+    padding: 35px 20px 15px;
+}
+
+.dashboard-footer p {
+    color: var(--muted);
+
+    font-style: italic;
+
+    font-size: 13px;
+}
+
+.dashboard-footer span {
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+    margin-top: 7px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 70px;
+
+        padding: 20px 8px;
+    }
+
+    .brand {
+        justify-content: center;
+
+        padding: 0 0 25px;
+    }
+
+    .brand h2,
+    .brand span {
+        display: none;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-item {
+        justify-content: center;
+
+        padding: 12px 8px;
+    }
+
+    .nav-item {
+        font-size: 0;
+    }
+
+    .nav-item span {
+        font-size: 18px;
+    }
+
+    .agent-mini-card {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 70px;
+
+        width: calc(100% - 70px);
+
+        padding: 20px;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .topbar h1 {
+        font-size: 20px;
+    }
+
+    .merchant-profile {
+        display: none;
+    }
+
+    .top-actions {
+        gap: 5px;
+    }
+
+    .ai-main-page {
+        padding: 30px 20px;
+    }
+
+    .simple-product-list > div {
+        gap: 10px;
+    }
+
+}

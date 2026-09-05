@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevGrow AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= SPLASH SCREEN ================= -->
+
+<div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+
+        <div class="logo-circle">R</div>
+
+        <h1>RevGrow <span>AI</span></h1>
+
+        <p class="agent-name">
+            Rega — Your AI Growth Agent
+        </p>
+
+        <p class="main-quote">
+            "Small actions today, BIG GROWTH tomorrow."
+        </p>
+
+        <div class="loading">
+            <span></span>
+            <p>Preparing your growth insights...</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ================= MAIN APPLICATION ================= -->
+
+<div id="dashboard" class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">R</div>
+
+            <div>
+                <h2>RevGrow</h2>
+                <span>AI</span>
+            </div>
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="#dashboard-page"
+               class="nav-item active"
+               data-page="dashboard-page">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#products-page"
+               class="nav-item"
+               data-page="products-page">
+                <span>▣</span>
+                Products
+            </a>
+
+            <a href="#ai-page"
+               class="nav-item"
+               data-page="ai-page">
+                <span>✦</span>
+                AI Growth
+            </a>
+
+            <a href="#campaigns-page"
+               class="nav-item"
+               data-page="campaigns-page">
+                <span>◈</span>
+                Campaigns
+            </a>
+
+            <a href="#payments-page"
+               class="nav-item"
+               data-page="payments-page">
+                <span>₹</span>
+                Payments
+            </a>
+
+            <a href="#activity-page"
+               class="nav-item"
+               data-page="activity-page">
+                <span>◷</span>
+                Activity Log
+            </a>
+            <a href="#checkout-page" class="nav-item" data-page="checkout-page">
+    <span>🛒</span> Checkout
+</a>
+
+            <a href="#reports-page"
+               class="nav-item"
+               data-page="reports-page">
+                <span>▥</span>
+                Reports
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a href="#settings-page"
+               class="nav-item"
+               data-page="settings-page">
+                <span>⚙</span>
+                Settings
+            </a>
+
+
+            <!-- Rega is also clickable -->
+
+            <a href="#ai-page"
+               class="agent-mini-card"
+               data-page="ai-page">
+
+                <div class="agent-avatar">
+                    R
+                </div>
+
+                <div>
+                    <strong>Rega</strong>
+                    <small>AI Growth Agent</small>
+                </div>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <p class="welcome-small">
+                    Good morning 👋
+                </p>
+
+                <h1>
+                    Merchant Dashboard
+                </h1>
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="notification">
+                    ♢
+                </button>
+
+                <div class="merchant-profile">
+
+                    <div class="profile-avatar">
+                        M
+                    </div>
+
+                    <div>
+                        <strong>Merchant</strong>
+                        <small>Store Admin</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================================================
+             DASHBOARD PAGE
+        =================================================== -->
+
+        <section id="dashboard-page"
+                 class="page-section active-page">
+
+            <section class="hero-section">
+
+                <div>
+                    <h2>
+                        Good morning, Merchant! 👋
+                    </h2>
+
+                    <p>
+                        Here's your revenue growth overview.
+                        Rega has found opportunities for you today.
+                    </p>
+                </div>
+
+                <button class="date-button">
+                    Last 30 Days ▾
+                </button>
+
+            </section>
+
+
+            <!-- STATISTICS -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-header">
+                        <span>Total Revenue</span>
+                        <div class="stat-icon revenue">₹</div>
+                    </div>
+
+                    <h3>₹45,230</h3>
+
+                    <p class="positive">
+                        ↑ 12.5%
+                        <span>vs last month</span>
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-header">
+                        <span>Total Orders</span>
+                        <div class="stat-icon orders">◈</div>
+                    </div>
+
+                    <h3>1,248</h3>
+
+                    <p class="positive">
+                        ↑ 8.2%
+                        <span>vs last month</span>
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-header">
+                        <span>Products</span>
+                        <div class="stat-icon products">▣</div>
+                    </div>
+
+                    <h3>42</h3>
+
+                    <p class="neutral">
+                        Active products
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card warning-card">
+
+                    <div class="stat-header">
+                        <span>Low-Selling Products</span>
+                        <div class="stat-icon warning">!</div>
+                    </div>
+
+                    <h3>3</h3>
+
+                    <p class="negative">
+                        ⚠ Needs attention
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- SALES + REGA -->
+
+            <section class="main-grid">
+
+                <!-- SALES -->
+
+                <div class="card sales-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Sales Performance</h3>
+                            <p>
+                                Track your product sales over time
+                            </p>
+                        </div>
+
+                        <select id="productFilter">
+
+                            <option value="all">
+                                All Products
+                            </option>
+
+                            <option value="buds">
+                                Wireless Buds
+                            </option>
+
+                            <option value="watch">
+                                Smart Watch
+                            </option>
+
+                            <option value="shoes">
+                                Running Shoes
+                            </option>
+
+                            <option value="backpack">
+                                Laptop Backpack
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div id="salesChart"
+                         class="chart-area">
+
+                        <div class="chart-placeholder">
+                            Sales chart will appear here
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REGA -->
+
+              <div class="card ai-card" id="regaOpportunity">
+
+                    <div class="ai-header">
+
+                        <div class="rega-avatar">
+                            ✦
+                        </div>
+
+                        <div>
+                            <h3>
+                                Rega's AI Opportunity
+                            </h3>
+
+                            <p>
+                                Growth opportunity detected
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="opportunity-alert">
+                        ⚠ Low sales detected
+                    </div>
+
+
+                    <div class="product-highlight">
+
+                        <div>
+                            <span>Product</span>
+                            <strong>Wireless Buds</strong>
+                        </div>
+
+                        <div>
+                            <span>Price</span>
+                            <strong>₹2,000</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="sales-comparison">
+
+                        <div>
+                            <small>Sold this week</small>
+                            <strong>7</strong>
+                        </div>
+
+                        <div>
+                            <small>Expected</small>
+                            <strong>20</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="rega-message">
+
+                        <strong>
+                            Rega recommends:
+                        </strong>
+
+                        <p>
+                            Try a <b>10% discount</b> for 24 hours
+                            to improve conversions.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-button"
+                        id="recommendationButton">
+
+                        View Recommendation →
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- PRODUCT PERFORMANCE -->
+
+            <section class="card products-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Product Performance</h3>
+
+                        <p>
+                            Understand which products need attention
+                        </p>
+                    </div>
+
+                    <button
+                        class="view-button"
+                        data-page="products-page">
+
+                        View All →
+
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Units Sold</th>
+                                <th>Revenue</th>
+                                <th>Growth</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <strong>Wireless Buds</strong>
+                                </td>
+
+                                <td>Electronics</td>
+
+                                <td>7</td>
+
+                                <td>₹14,000</td>
+
+                                <td class="negative">
+                                    ↓ 24%
+                                </td>
+
+                                <td>
+                                    <span class="status warning">
+                                        Needs Attention
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>Smart Watch</strong>
+                                </td>
+
+                                <td>Electronics</td>
+
+                                <td>18</td>
+
+                                <td>₹45,000</td>
+
+                                <td class="positive">
+                                    ↑ 15%
+                                </td>
+
+                                <td>
+                                    <span class="status success">
+                                        Performing Well
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>Running Shoes</strong>
+                                </td>
+
+                                <td>Fashion</td>
+
+                                <td>5</td>
+
+                                <td>₹15,000</td>
+
+                                <td class="negative">
+                                    ↓ 18%
+                                </td>
+
+                                <td>
+                                    <span class="status warning">
+                                        Needs Attention
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOTTOM -->
+
+            <section class="bottom-grid">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Active Campaigns</h3>
+                            <p>Current growth campaigns</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="campaign">
+
+                        <div class="campaign-icon">%</div>
+
+                        <div>
+                            <strong>Wireless Buds</strong>
+                            <p>
+                                10% discount • 24 hours
+                            </p>
+                        </div>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="campaign">
+
+                        <div class="campaign-icon">%</div>
+
+                        <div>
+                            <strong>Running Shoes</strong>
+                            <p>
+                                5% discount • 48 hours
+                            </p>
+                        </div>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Recent Activity</h3>
+                            <p>Your latest growth actions</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-dot success-dot"></div>
+
+                        <div>
+                            <strong>
+                                Sales data analyzed
+                            </strong>
+
+                            <small>
+                                2 minutes ago
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-dot ai-dot"></div>
+
+                        <div>
+                            <strong>
+                                Rega found an opportunity
+                            </strong>
+
+                            <small>
+                                5 minutes ago
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-dot payment-dot"></div>
+
+                        <div>
+                            <strong>
+                                Campaign approved
+                            </strong>
+
+                            <small>
+                                10 minutes ago
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    "Data shows the path, AI shows the opportunity,
+                    You make the growth happen."
+                </p>
+
+                <span>— RevGrow AI</span>
+
+            </footer>
+
+        </section>
+
+
+        <!-- ==================================================
+             PRODUCTS PAGE
+        =================================================== -->
+
+        <section id="products-page" class="page-section">
+
+            <div class="page-heading">
+
+                <h2>Products</h2>
+
+                <p>
+                    Monitor your products and identify
+                    products that need attention.
+                </p>
+
+            </div>
+
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <span>Total Products</span>
+                    <h3>42</h3>
+                    <p class="neutral">Active products</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>Top Products</span>
+                    <h3>12</h3>
+                    <p class="positive">Performing well</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>Low-Selling</span>
+                    <h3>3</h3>
+                    <p class="negative">Needs attention</p>
+                </div>
+
+            </section>
+
+
+            <div class="card page-card">
+
+                <h3>Product Performance</h3>
+
+                <div class="simple-product-list">
+
+                    <div>
+                        <strong>Wireless Buds</strong>
+                        <span class="status warning">
+                            Needs Attention
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>Smart Watch</strong>
+                        <span class="status success">
+                            Performing Well
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>Running Shoes</strong>
+                        <span class="status warning">
+                            Needs Attention
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>Laptop Backpack</strong>
+                        <span class="status success">
+                            Performing Well
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+     AI GROWTH PAGE
+=================================================== -->
+
+<section id="ai-page" class="page-section">
+
+    <div class="page-heading">
+        <h2>Rega AI Growth</h2>
+        <p>
+            Your AI agent continuously analyzes sales
+            and identifies opportunities to grow revenue.
+        </p>
+    </div>
+
+
+    <div class="card ai-main-page">
+
+        <div class="rega-large">
+            ✦
+        </div>
+
+        <h2>
+            Rega found a growth opportunity
+        </h2>
+
+        <p>
+            Rega analyzed your recent product performance
+            and identified a product selling below expectations.
+        </p>
+
+
+        <!-- OPPORTUNITY -->
+
+        <div class="ai-insight-box">
+
+            <strong>🔍 Opportunity Detected</strong>
+
+            <p>
+                <b>Wireless Buds</b> sold
+                <b>7 units</b> this week,
+                compared with an expected
+                <b>20 units</b>.
+            </p>
+
+        </div>
+
+
+        <!-- RECOMMENDATION -->
+
+        <div class="ai-insight-box">
+
+            <strong>💡 Rega's Recommendation</strong>
+
+            <p>
+                Offer a <b>10% discount</b> on Wireless Buds
+                for <b>24 hours</b>.
+            </p>
+
+            <small>
+                Goal: improve conversions and recover
+                lost sales opportunities.
+            </small>
+
+        </div>
+
+
+        <!-- SAFETY -->
+
+        <div class="ai-insight-box">
+
+            <strong>🛡️ Safety & Approval</strong>
+
+            <p>
+                Rega cannot execute money-related actions
+                without merchant approval.
+            </p>
+
+            <small>
+                Every recommendation is recorded in the
+                Activity Log for transparency.
+            </small>
+
+        </div>
+
+
+        <button
+            class="primary-button"
+            id="aiRecommendationButton">
+
+            Review & Approve Recommendation →
+
+        </button>
+
+    </div>
+
+</section>
+
+        <!-- ==================================================
+             CAMPAIGNS PAGE
+        =================================================== -->
+
+        <section id="campaigns-page" class="page-section">
+
+            <div class="page-heading">
+
+                <h2>Campaigns</h2>
+
+                <p>
+                    Manage your merchant growth campaigns.
+                </p>
+
+            </div>
+
+
+            <div class="card page-card" id="campaignContainer">
+
+                <h3>Active Campaigns</h3>
+
+
+                <div class="campaign">
+
+                    <div class="campaign-icon">%</div>
+
+                    <div>
+                        <strong>
+                            Wireless Buds — 10% OFF
+                        </strong>
+
+                        <p>
+                            24 hour campaign
+                        </p>
+                    </div>
+
+                    <span class="status active">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="campaign">
+
+                    <div class="campaign-icon">%</div>
+
+                    <div>
+                        <strong>
+                            Running Shoes — 5% OFF
+                        </strong>
+
+                        <p>
+                            48 hour campaign
+                        </p>
+                    </div>
+
+                    <span class="status active">
+                        Active
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PAYMENTS PAGE
+        =================================================== -->
+
+        <section id="payments-page" class="page-section">
+
+    <div class="page-heading">
+
+        <h2>Payments</h2>
+
+        <p>
+            Monitor payment activity from your growth campaigns.
+        </p>
+
+    </div>
+
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <span>Successful Payments</span>
+
+            <h3>1,182</h3>
+
+            <p class="positive">
+                94.7% success rate
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>Pending</span>
+
+            <h3>42</h3>
+
+            <p class="neutral">
+                Awaiting payment
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>Failed</span>
+
+            <h3>24</h3>
+
+            <p class="negative">
+                Needs review
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <div class="card page-card">
+
+        <h3>Razorpay Test Mode</h3>
+
+        <p>
+            Simulated payment environment for testing merchant growth campaigns.
+        </p>
+
+        <div style="margin-top: 20px;">
+
+            <span class="status active">
+                Test Mode Active
+            </span>
+
+        </div>
+
+        <div style="margin-top: 20px;">
+
+            <button
+                class="primary-button"
+                id="testPaymentButton">
+                Create Test Payment
+            </button>
+
+        </div>
+
+        <p
+            id="paymentMessage"
+            style="margin-top: 15px;">
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==================================================
+     CUSTOMER CHECKOUT PAGE
+=================================================== -->
+
+<section id="checkout-page" class="page-section">
+
+    <div class="page-heading">
+
+        <h2>Customer Checkout</h2>
+
+        <p>
+            Experience the checkout created from a Rega growth campaign.
+        </p>
+
+    </div>
+
+    <div class="card page-card">
+
+        <div class="rega-large">
+            🛒
+        </div>
+
+        <h2>Wireless Buds</h2>
+
+        <p>
+            Special offer created by Rega.
+        </p>
+
+        <div class="ai-insight-box">
+
+            <strong>🎉 Limited-Time Offer</strong>
+
+            <p>
+                Original Price: <s>₹2,000</s>
+            </p>
+
+            <p>
+                <b>Campaign Price: ₹1,800</b>
+            </p>
+
+            <small>
+                10% discount • Valid for 24 hours
+            </small>
+
+        </div>
+
+        <button
+            class="primary-button"
+            id="checkoutPaymentButton">
+
+            Pay ₹1,800 in Test Mode →
+
+        </button>
+
+        <p
+            id="checkoutMessage"
+            style="margin-top: 15px;">
+        </p>
+
+    </div>
+
+</section>
+
+        <!-- ==================================================
+             ACTIVITY LOG PAGE
+        =================================================== -->
+
+        <section id="activity-page" class="page-section">
+
+            <div class="page-heading">
+
+                <h2>Activity Log</h2>
+
+                <p>
+                    Transparent record of RevGrow and Rega actions.
+                </p>
+
+            </div>
+
+
+            <div class="card page-card">
+
+                <h3>Recent Activity</h3>
+
+
+                <div class="activity">
+
+                    <div class="activity-dot success-dot"></div>
+
+                    <div>
+                        <strong>
+                            Sales data analyzed
+                        </strong>
+
+                        <small>
+                            Today • 10:00 AM
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-dot ai-dot"></div>
+
+                    <div>
+                        <strong>
+                            Rega detected low-selling Wireless Buds
+                        </strong>
+
+                        <small>
+                            Today • 10:02 AM
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-dot ai-dot"></div>
+
+                    <div>
+                        <strong>
+                            Rega generated 10% discount recommendation
+                        </strong>
+
+                        <small>
+                            Today • 10:03 AM
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-dot payment-dot"></div>
+
+                    <div>
+                        <strong>
+                            Waiting for merchant approval
+                        </strong>
+
+                        <small>
+                            Today • 10:04 AM
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             REPORTS PAGE
+        =================================================== -->
+
+        <section id="reports-page" class="page-section">
+
+            <div class="page-heading">
+
+                <h2>Reports</h2>
+
+                <p>
+                    Understand your store's sales performance.
+                </p>
+
+            </div>
+
+
+            <div class="card page-card">
+
+                <h3>Revenue Summary</h3>
+
+                <div class="report-highlight">
+
+                    <strong>₹45,230</strong>
+
+                    <span>
+                        Total revenue
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SETTINGS PAGE
+        =================================================== -->
+
+        <section id="settings-page" class="page-section">
+
+            <div class="page-heading">
+
+                <h2>Settings</h2>
+
+                <p>
+                    Manage your RevGrow preferences.
+                </p>
+
+            </div>
+
+
+            <div class="card page-card">
+
+                <div class="setting-row">
+
+                    <div>
+                        <strong>
+                            Rega AI Recommendations
+                        </strong>
+
+                        <p>
+                            Allow Rega to analyze
+                            product performance.
+                        </p>
+                    </div>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <strong>
+                            Merchant Approval Required
+                        </strong>
+
+                        <p>
+                            Require approval before
+                            money-related actions.
+                        </p>
+                    </div>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+
+<script src="data.js"></script>
+<script src="rega.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
